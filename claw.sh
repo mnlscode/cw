@@ -12,5 +12,5 @@ sh ./claw/vps.sh &
 while true
 do
 	echo $(grep Pss /proc/[1-9]*/smaps |awk '{total+=$2}; END {print total}'),$(date)
-	sleep 5
+	sleep 10
 done
