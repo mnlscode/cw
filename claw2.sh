@@ -16,5 +16,6 @@ sh ./claw/vps.sh &
 
 while true
 do
+	ps aux
 	sleep 10
 done
