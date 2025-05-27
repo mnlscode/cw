@@ -2,8 +2,8 @@
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
 apt update ; apt -y install procps
 
-echo 002====================================================
-ulimit -v 61440
+echo 003====================================================
+ulimit -v 65536
 ulimit -a
 
 cd /root
