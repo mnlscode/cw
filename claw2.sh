@@ -2,10 +2,8 @@
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
 apt update ; apt -y install procps
 
-mount | grep -F "cgroup2"
-mkdir /sys/fs/cgroup/mygroup
-echo $((60*1024*1024)) | tee /sys/fs/cgroup/mygroup/memory.max
-echo $$ | tee /sys/fs/cgroup/mygroup/cgroup.procs
+ulimit -v 131072
+ulimit -a
 
 cd /root
 curl -s api.ipify.org ; echo
@@ -19,6 +17,6 @@ sh ./claw/vps.sh &
 
 while true
 do
-	ps aux ; echo 008====================================================
+	ps aux ; echo 009====================================================
 	sleep 5
 done
