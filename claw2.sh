@@ -2,7 +2,7 @@
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
 apt update ; apt -y install procps
 
-ulimit -v 65536
+ulimit -v unlimited
 ulimit -a
 
 cd /root
@@ -17,6 +17,6 @@ sh ./claw/vps.sh &
 
 while true
 do
-	ps aux ; echo 003====================================================
+	ps aux ; echo 004====================================================
 	sleep 10
 done
