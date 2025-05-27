@@ -1,4 +1,7 @@
 #!/bin/bash
+ulimit -v 51200
+ulimit
+
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
 apt update ; apt -y install procps
 
