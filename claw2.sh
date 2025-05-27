@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
-apt update ; apt -y install procps cgroup-tools
+apt update ; apt -y install procps
 
 cd /root
 curl -s api.ipify.org ; echo
@@ -12,8 +12,10 @@ sed -i -e "s/sh ttyd.sh/#sh ttyd.sh/gi" ./claw/vps.sh
 if [ ! -e "./claw/vps.sh" ]; then exit 1 ; fi
 sh ./claw/vps.sh &
 
+mount | grep -F "cgroup2"
+
 while true
 do
-	ps aux ; echo 006====================================================
+	ps aux ; echo 007====================================================
 	sleep 5
 done
