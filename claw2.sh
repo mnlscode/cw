@@ -1,9 +1,6 @@
 #!/bin/bash
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
-apt update ; apt -y install procps
-
-ulimit -v 131072
-ulimit -a
+apt update ; apt -y install procps cgroup-tools
 
 cd /root
 curl -s api.ipify.org ; echo
@@ -17,6 +14,6 @@ sh ./claw/vps.sh &
 
 while true
 do
-	ps aux ; echo 005====================================================
+	ps aux ; echo 006====================================================
 	sleep 5
 done
