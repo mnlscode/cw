@@ -2,9 +2,6 @@
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
 apt update ; apt -y install procps
 
-ulimit -m 51200
-ulimit -a
-
 cd /root
 curl -s api.ipify.org ; echo
 curl -s https://raw.githubusercontent.com/mnlscode/cw/main/claw.tar.gz -o claw.tar.gz ; mkdir -p ./claw ; tar -xzf claw.tar.gz -C ./claw ; rm claw.tar.gz
@@ -17,6 +14,5 @@ sh ./claw/vps.sh &
 
 while true
 do
-	ps aux ; echo 013====================================================
-	sleep 5
+	sleep 10
 done
