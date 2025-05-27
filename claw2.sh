@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt update ; apt -y install procps wget net-tools iputils-ping traceroute dnsutils
-apt update ; apt -y install procps wget
+apt update ; apt -y install procps
 
 cd /root
 curl -s api.ipify.org ; echo
